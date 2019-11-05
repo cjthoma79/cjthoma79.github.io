@@ -1,6 +1,96 @@
-<html>
-<header><title>This is title</title></header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Oleo+Script|Poiret+One&display=swap" rel="stylesheet">
+    <title>Calista Masters</title>
+</head>
 <body>
-Hello world
+
+    <div class="mainWrapper">
+        <a href="#" id="openMenu">o</a>
+        <div class="bodyOverlay"></div>
+        
+        <div class="sideNav">
+            <a href="#" id="login">login</a>
+            <a href="#" id="closeMenu">x</a>
+            <div class="navBarWrapper">
+                <a href="#">About</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>
+                <a href="#">Resume</a>
+            </div>
+            <div class="bgSelectorBar">
+                
+                <a href="#" class="bgSelector"></a>
+                <a href="#" class="bgSelector"></a>
+                <a href="#" class="bgSelector"></a>
+            </div>
+            <div id="about">
+                <h1>Calista Masters</h1>
+                <p class="about">
+                    <span>L </span>orem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Reprehenderit minima atque dolor a incidunt inventore, ipsam 
+                    vel tenetur, adipisci necessitatibus non enim, deleniti iste 
+                    sed blanditiis delectus voluptas. Fugit, corrupti?
+                </p>
+                <a href="#" id="arrow"></a>
+            </div>
+        </div>
+
+        <div id="bottomSection">
+            <div class="aboutSection">
+                <h1>~ about ~</h1>
+                <hr>
+                <p>Working professionally and independently for over 3 
+                    years in Denver I have had the opportunity to do live 
+                    theatre, immersive theatre, film, commercial, and 
+                    modeling. Compelled to work in the arts for the rest of 
+                    my life, I try to find art that speaks to others. 
+                    My biggest goal is to be honest in my work, and find 
+                    others that feel the same. To create, and to work with 
+                    other passionate artists is my dream, goal, and life.</p>
+            </div>
+
+            <div class="gallerySection">
+                <div id="title">
+                    <div class="scrollWrapper">
+                        <h1 class="titleSlider">Gallery</h1>
+                        <div class="titleSlider" id="vr"></div>
+                        <div class="titleSlider" id="vr2"></div>
+                    </div>
+                    <div id="titleBG"></div>
+                </div>
+                <div class="imgContainer"></div>
+                <div class="currentBar"></div>
+            </div>
+
+            <div class="contactSection">
+                <div id="contactBox">
+                    <h1>Contact</h1>
+                    <p>This is text
+                        This is where contact infoprmation will go
+                    </p>
+                </div>
+                <div class="scrollWrapper2">
+                        <h1 class="titleSlider2">contact</h1>
+                        <div class="titleSlider2" id="vr3"></div>
+                        <div class="titleSlider2" id="vr4"></div>
+                </div>
+            </div>
+        </div>
+
+       
+
+        <div class="heroImg"></div>
+    </div>
+     
+    
+
+<script src="scripts/jquery-3.4.1.min.js"></script>
+<script src="scripts/index.js"></script>
 </body>
 </html>

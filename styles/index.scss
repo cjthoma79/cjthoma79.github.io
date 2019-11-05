@@ -1,0 +1,458 @@
+body, html {
+  background-color: #252526;
+  scroll-behavior: smooth;
+  overflow-x: hidden; 
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300; 
+}
+
+.mainWrapper{
+    width: 100vw;
+    height: 100vh;
+}
+
+.heroImg {
+    background-image: url(../assets/hero_img2.jpg);
+    background-size: cover;
+    position: fixed;
+    
+    min-height: 105%;
+    width: 105%;
+    border: dashed thick purple;
+    z-index: 0;
+}
+
+
+
+/************* Side Navigation ************/
+
+.navBarWrapper {
+    position: absolute;
+    width: 50px;
+    height: 250px;
+    align-items: left;
+    justify-content: left;
+    display: block;
+    top: 30%;
+    margin: 10px;
+    z-index: 10;
+    
+}
+
+
+.sideNav {
+    position: absolute;
+    min-height: 700px;
+    width: 45vw;
+    min-width: 500px;
+    top: 0;
+    left: 0px;
+    background-color: #485e3d;
+    overflow: hidden;
+    padding-top: 20px;
+    filter: drop-shadow(-10px 12px 7px rgba(0, 0, 0, 0.5)); 
+    overflow: visible;
+    z-index: 4;
+
+    & a {
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+        font-weight: 100;
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        color: white;
+        display: block;
+        text-transform: lowercase; 
+        z-index: 5;
+        transition: .65s;
+    }
+
+    & a:hover {
+        color: #fff1d0;
+    }
+
+    & #login,  #closeMenu {
+        position: absolute;
+        display: block;
+        font-family: 'Roboto', sans-serif;
+        width: 100px;
+        margin: 10px;
+        font-size: 12px;
+        font-weight: 100; 
+    }
+
+    #closeMenu {
+        left: 90%;
+    }
+
+    & #openMenu {
+        position: relative;
+        font-size: 12px;
+        top: 10px; 
+    }
+
+    & .bgSelectorBar {
+        position: absolute;
+        width: 50px;
+        height: 750px;
+        top: 0px; 
+        right: -50px;
+        z-index: 15;
+        background-color: rgba(203, 255, 210, 0.25);
+
+        & a {
+            background-image: url("../assets/photo-png-14.png");
+            background-repeat: no-repeat;
+            background-size: 30px;
+            background-position: center;
+            position: relative;
+            display: block;
+            bottom: -565px;
+            width: 10px;
+            height: 10px;
+            margin: 10px 8px;
+            padding: 10px;
+            border: ridge 1px black;
+        }
+
+        & .bgSelector {
+            content: "";
+            filter: invert(100%);
+        }
+    }
+
+    & h1 {
+        position: absolute;
+        display: block;
+        font-family: 'Oleo Script', cursive;
+        z-index: 6;
+        top: 0px;
+        font-size: 80px;    
+        color: white;
+        right: -100px;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #252526;
+        z-index: 15;
+    }
+
+    & p {
+        position: absolute;
+        display: block;
+        width: 300px;
+        font-size: 15px;
+        z-index: 6;
+        color: black;
+        right: 25px;
+        top: 150px;
+        z-index: 15;
+    }
+
+    & p span {
+        font-size: 50px;
+        color: #fff1d0;
+    }
+
+    & #arrow {
+        background-image: url('../assets/2596838-200.png');
+        background-repeat: no-repeat;
+        background-size: 75px;
+        background-position: center;
+        transform: rotate(-90deg);
+        position: absolute;
+        display: block;
+        bottom: 70px;
+        right: 5px;
+        width: 50px;
+        height: 50px;
+        z-index: 6;
+        filter: opacity(50%);
+        transition: .65s;
+    }
+
+    #arrow:hover {
+        filter: invert(100%);
+        bottom: 45px;
+    }
+}
+
+.bodyOverlay {
+  position: absolute;
+  min-height: 200%;
+  min-width: 200%;
+  margin: 0px;
+  padding: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2; 
+}
+
+#openMenu {
+  position: fixed;
+  font-size: 30px;
+  right: 30px;
+  top: 70px;
+  z-index: 3; 
+}
+
+.sideNav:after {
+    animation: grain 8s steps(10) infinite;
+    background-image: url('http://api.thumbr.it/whitenoise-361x370.png?');
+    position: absolute;
+    content: "";
+    height: 300%;
+    left: -50%;
+    opacity: 0.3;
+    top: -110%;
+    width: 150%;
+    z-index: 0;
+}
+ 
+@keyframes grain {
+    0%, 100% { transform:translate(0, 0) }
+    10% { transform:translate(0%, -10%) }
+    20% { transform:translate(0%, 5%) }
+    30% { transform:translate(0%, -25%) }
+    40% { transform:translate(0%, 25%) }
+    50% { transform:translate(0%, 10%) }
+    60% { transform:translate(0%, 0%) }
+    70% { transform:translate(0%, 15%) }
+    80% { transform:translate(0%, 35%) }
+    90% { transform:translate(0%, 10%) }
+}
+
+/*************** BOTTOM SECTION ************/
+
+#bottomSection {
+    position: absolute;
+    width: 100%;
+    height: 2000px;
+    top: 710px;
+    background-color: #fff1d0;
+    z-index: 5;
+
+
+    //------ ABOUT SECTION ------//
+    .aboutSection {
+        width: 100%;
+        height: auto;
+        text-align: center;
+    
+        & h1 {
+            font-family: 'Oleo Script', cursive;
+            font-size: 50px;
+            padding: 30px 0px;
+            text-transform: lowercase;
+        }
+    
+        & hr {
+            width: 350px;
+            color: white;
+            margin-top: -60px;
+        }
+    
+        & p {
+            width: 690px;
+            margin: 50px auto;
+            margin-bottom: 200px;
+        }
+    }
+    
+    //------ GALLERY SECTION ------//
+    .gallerySection {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: auto;
+        // border: dashed thick green;
+        text-align: center;
+
+        & .imgContainer {
+            width: 600px;
+            min-width: 250px;
+            height: 338px;
+            min-height: 141px;
+            margin: 25px auto;
+            background-color: pink;
+            
+            background-image: url('../assets/gallery_imgs/1.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            filter: drop-shadow(-10px 12px 7px rgba(0, 0, 0, 0.5)); 
+
+        }
+
+        & #title {
+            position: absolute;
+            display: block;
+            width: 50%;
+            height: 500px;
+            top: -50px;
+            right: 0px;
+            overflow: hidden;
+
+            & .scrollWrapper {
+                position: absolute;
+                overflow: hidden;
+                width: 50px;
+                height: 300%;
+                right: 10px;
+                top: 0px;
+                z-index: 10;
+            }
+
+            & #vr, #vr2{
+                position: absolute;
+                display: block;
+                height: 100%;
+                top: 0%;
+                left: 11px;
+                overflow: hidden;
+                border-left: 2px solid #fff1d0;
+            }
+
+            & #vr {
+                height: 100%;
+                top: -62%;
+                
+            }
+
+            & #vr2 {
+                height: 100%;
+                top: 45%;
+            }
+
+            & h1 {
+                position: relative;
+                font-size: 18px;
+                right: 10px;
+                top: 40%;
+                text-transform: lowercase;
+                transform: rotate(90deg);
+                color: #fff1d0;
+                z-index: 1;
+            }
+
+            & #titleBG {
+                width: 100%;
+                height: 100%;
+                background-color: #485e3d;
+            }
+        }
+
+        #titleBG:after {
+            animation: grain 8s steps(10) infinite;
+            background-image: url('');
+            position: absolute;
+            content: "";
+            height: 300%;
+            left: -50%;
+            opacity: 0.3;
+            top: -110%;
+            width: 150%;
+            z-index: 0;
+        }
+
+        & .currentBar {
+            width: 200px;
+            height: 10px;
+            margin: 10px auto;
+            padding: 0px;
+            text-align: center;
+
+            & .imgGalButton {
+                display: inline-block;
+                margin: 0 5px;
+                width: 2px;
+                height: 100%;
+                border-radius: 50px;
+                background-color: rgba(0, 0, 0, 0.5);
+                filter: drop-shadow(-10px 12px 7px rgba(0, 0, 0, 0.5)); 
+            }
+
+            .selected {
+                background-color: rgb(50, 221, 50);
+            }
+        }
+    
+    }
+
+    //------ CONTACT SECTION ------//
+    .contactSection {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 350px;
+        top: 1100px;
+        text-align: center;
+        box-shadow: inset 0 0 10px #000000; 
+        background-image: url('../assets/contact_img.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        #contactBox {
+            position: relative;
+            width: 500px;
+            height: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            top: 70px;
+            padding: 20px;
+            margin: 0 auto;
+            filter: drop-shadow(-5px 5px 3px rgba(0, 0, 0, 0.5)); 
+
+            & h1 {
+                font-family: 'Oleo Script', cursive;
+            }
+        }
+
+        & .scrollWrapper2 {
+            position: absolute;
+            overflow: hidden;
+            width: 50px;
+            height: 300%;
+            left: 20px;
+            top: 0px;
+            border: dashed solid darkgoldenrod;
+            z-index: 10;
+
+            & #vr3, #vr4{
+                position: absolute;
+                display: block;
+                height: 100%;
+                left: 11px;
+                overflow: hidden;
+                border-left: 2px solid #fff1d0;
+            }
+    
+            & #vr3 {
+                height: 100%;
+                top: -57%;
+                color: red;
+                
+            }
+    
+            & #vr4 {
+                height: 100%;
+                top: 52%;
+            }
+    
+            & h1 {
+                position: relative;
+                font-size: 18px;
+                right: 10px;
+                top: 45%;
+                text-transform: lowercase;
+                transform: rotate(90deg);
+                color: #fff1d0;
+                z-index: 1;
+            }
+        }
+    }
+}
+
+
