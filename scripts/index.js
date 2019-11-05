@@ -1,10 +1,4 @@
 
-//When window loads fade overlay and select bg img
-window.addEventListener('load', function(){
-   // $(".bodyOverlay").fadeOut('normal', function(){
-        //$('bodyOverlay').fadeIn();
-   // })
-})
 
 
 //-------------------- Gallery  ------------------------//
@@ -76,22 +70,7 @@ $(window).scroll(function() {
 //--------------- Side Nav Functions ---------------//
 
 
-//close menu funtion
-
-
-//open menu function
-$("#openMenu").click(function() {
-    if($(".sideNav").css("left") == "-1200px"){
-        $(".sideNav").animate({"left": "0px"},"fast");
-        $(".bodyOverlay").fadeIn('normal', function(){
-            $('bodyOverlay').fadeOut();
-        })
-    }
-})
-
 //Returns side nav elements position in array when click
-
-
 $('.sideNav a').click(function(){
     console.log(this);
     sideNavClickHandler($('.sideNav a').index(this));
@@ -108,17 +87,6 @@ function sideNavClickHandler(pos) {
         break;
 
         case 1:
-            //side nav
-            //closes nav
-            if(element.css("left") == "0px"){
-                element.animate({"left": "-1200px"},"fast");
-                $(".bodyOverlay").fadeOut('normal', function(){
-                    $('bodyOverlay').fadeIn();
-                })
-            }
-        break;
-
-        case 2:
             //about
             //scrolls to about section
             $('html,body').animate({
@@ -126,7 +94,7 @@ function sideNavClickHandler(pos) {
               }, 400);
         break;
 
-        case 3:
+        case 2:
             //gallery button
             //scrolls to gallery section
             $('html,body').animate({
@@ -134,23 +102,23 @@ function sideNavClickHandler(pos) {
               }, 400);
         break;
 
-        case 4:
+        case 3:
             //contact button
             $('html,body').animate({
                 scrollTop: $('.contactSection').offset().top -150
             }, 400);
         break;
 
-        case 5:
+        case 4:
             //resume button
+            window.open('../assets/Calista Masters2019RES.pdf');
+        break;
+
+        case 5:
             console.log('test');
         break;
 
-        case 6:
-            console.log('test');
-        break;
-
-        case 9:
+        case 8:
             //arrow button
             //scrolls to about section
             $('html,body').animate({
